@@ -1,0 +1,122 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* ヘッダーのスタイル */
+header{
+    background-color: #8A8B8B;
+    padding: 0.5rem;
+}
+
+/* liのスタイル */
+ul {
+    display: table;
+    table-layout: fixed;
+    /* width: 500px; */
+    list-style: none;
+}
+
+ul li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.container {
+    background-color:#ffa;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ゲームの中の写真のスタイル */
+td.cardRoom {
+    background-color: gray;
+    width: 100px;
+    height: 150px;
+    border: solid pink 5px;
+    border-radius: 10px;
+}
+li.cardRoom {
+    background-color: gray;
+    width: 100px;
+    height: 150px;
+    border: solid pink 5px;
+    border-radius: 10px;
+}
+img.gameCardImage {
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+}
+img.unselected {
+    background-color: blue;
+    opacity: 0;
+    /* visibility: hidden; */
+}
+table {
+    margin: auto;
+}
+
+
+/* 画像選択のスタイル */
+ul.image_list li {
+    /* liが横並びになるように */
+    display:inline-block;
+}
+
+ul.image_list li .image_box {
+    /* background-color: azure; */
+    position: relative;
+}
+.image_box img.thumbnail {
+    width: 100px; 
+    height: 150px;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.image_box .disabled_checkbox {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    /* チェック前は非表示 */
+    display: none;
+    /* チェックボックスを大きくする*/
+    transform: scale(2);
+    /* チェックボックスにカーソルを合わせたときに */
+    cursor: pointer;
+}
+.image_box img.thumbnail.checked {
+    /* チェックが入ったら枠を表示 */
+    border: 6px solid blue;
+    /* 線をwidthとheightに含める */
+    box-sizing: border-box;
+}
+
+.image_box img.thumbnail.checked + .disabled_checkbox {
+    /* 画像にcheckedクラスが指定された時はチェックボックスを非表示に */
+    display: block;
+}
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+} 
+
+/* 正解したあとの画像のスタイル */
+.front {
+    user-select: none;
+    pointer-events: none;
+}
+/* エラ〜メッセージのスタイル */
+.error {
+    color: red;
+}
+
+button.gameCard {
+    width: 100px;
+    height: 200px;
+}
+
+
