@@ -1,15 +1,13 @@
     filename0 = ''; // 1枚目のカード
     filename1 = ''; // 2枚目のカード
     $flag = false; // 1枚目と2枚目が一致しているかどうか
-
+    $('button[name="start"]').click(function(){
+        $('.image_list').removeClass('hidden');
+    });
     // 1回目の選択 
     $('img').click(function() {
         // 正解してfrontクラスを保有していたら選び直し
             if($flag === false){ // 1枚目のカードをめくる
-                // $(this).attr({
-                //     id: 'first',
-                //     class: 'front'
-                // });
                 $(this).attr("id", "first");
                 $(this).addClass('front');
                 $(this).removeClass('unselected'); // unselectedクラスの削除
@@ -27,8 +25,6 @@
                 // ファイル名が一致するか判定
                 if(filename0 === filename1){
                     $('#msg').text('正解です！おめでとう！');
-                    // $('#first').attr({id: '', class: 'front'});
-                    // $('#second').attr({id: '', class: 'front'});
                     $('#first').attr('id', '');
                     $('#second').attr('id', '');
                     $('#second').addClass('front');
@@ -48,8 +44,13 @@
                 // もう一度1枚目から選択する
                 $flag = false;
                 // 全部選択されていたら終了
-                if($('.front').length === 8) {
-                    $('#msg').append('<p>ゲーム終了です</p>');
+                if($('.front').length === 7) {
+                    $('#msg').text('ゲーム終了です。ゲームリセットを押してください。');
                 }
             }
+    });
+
+    // スタートボタンを押したらカードが表示される
+    $('button[type="reset"]').click(function(){
+        location.reload();
     });

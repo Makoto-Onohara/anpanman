@@ -1,15 +1,43 @@
 body {
-    width: 960px;
+    width: 100%;
+    max-width: 830px;
     margin: 0 auto;
 }
 
-/* ヘッダーのスタイル */
-header{
-    background-color: #8A8B8B;
-    padding: 0.5rem;
+button {
+    padding: 10px 20px;
+    background-color: #EC6B0F;
+    border: none;
+    font-size: large;
+    color: #ffffff;
 }
 
-/* liのスタイル */
+/* ヘッダーのスタイル */
+nav {
+    text-align: center;
+}
+header{
+    background-color: #263240;
+    padding: 0.5rem;
+}
+header h1,a {
+    color: #ffffff;
+}
+header a {
+    text-decoration: none;
+    width: 100px;
+}
+
+header ul li{
+    padding: 10px 15px;
+    border: #ffffff solid 2px;
+}
+li#noborder {
+    border:none;
+}
+
+
+/* カードliのスタイル */
 ul {
     display: table;
     table-layout: fixed;
@@ -23,10 +51,12 @@ ul li {
     text-align: center;
 }
 
+
 .container {
-    background-color:#ffa;
+    background-color:#fff;
     margin: 0 auto;
     text-align: center;
+
 }
 
 /* ゲームの中の写真のスタイル */
@@ -60,6 +90,11 @@ table {
 
 
 /* 画像選択のスタイル */
+/* スタートが押されるまでは見えないようにする */
+.hidden {
+    visibility: hidden;
+}
+
 ul.image_list li {
     /* liが横並びになるように */
     display:inline-block;
@@ -119,4 +154,7 @@ button.gameCard {
     height: 200px;
 }
 
+input[type="file"] {
+    padding: 20px;
+}
 
