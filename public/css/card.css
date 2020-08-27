@@ -1,0 +1,55 @@
+/* カードliのスタイル */
+ul {
+    display: table;
+    table-layout: fixed;
+    /* width: 500px; */
+    list-style: none;
+}
+
+ul li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.container {
+    background-color:#fff;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+/* ゲームの中の写真のスタイル */
+td.cardRoom {
+    background-color: gray;
+    width: 100px;
+    height: 150px;
+    border: solid pink 5px;
+    border-radius: 10px;
+}
+li.cardRoom {
+    background-color: gray;
+    width: 100px;
+    height: 150px;
+    border: solid pink 5px;
+    border-radius: 10px;
+}
+img.gameCardImage {
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+}
+img.unselected {
+    background-color: blue;
+    opacity: 0;
+    /* visibility: hidden; */
+}
+table {
+    margin: auto;
+}
+
+/* 画像をドラッグを禁止 */
+img {
+    -webkit-user-drag: none;
+}

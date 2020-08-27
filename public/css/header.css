@@ -1,0 +1,23 @@
+/* ヘッダーのスタイル */
+nav {
+    text-align: center;
+}
+header{
+    background-color: #263240;
+    padding: 0.5rem;
+}
+header h1,a {
+    color: #ffffff;
+}
+header a {
+    text-decoration: none;
+    width: 100px;
+}
+
+header ul li{
+    padding: 10px 15px;
+    border: #ffffff solid 2px;
+}
+li#noborder {
+    border:none;
+}

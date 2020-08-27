@@ -1,0 +1,46 @@
+
+/* 画像選択のスタイル */
+/* スタートが押されるまでは見えないようにする */
+.hidden {
+    visibility: hidden;
+}
+
+ul.image_list li {
+    /* liが横並びになるように */
+    display:inline-block;
+}
+
+ul.image_list li .image_box {
+    /* background-color: azure; */
+    position: relative;
+}
+.image_box img.thumbnail {
+    width: 100px; 
+    height: 150px;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.image_box .disabled_checkbox {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    /* チェック前は非表示 */
+    display: none;
+    /* チェックボックスを大きくする*/
+    transform: scale(2);
+    /* チェックボックスにカーソルを合わせたときに */
+    cursor: pointer;
+}
+.image_box img.thumbnail.checked {
+    /* チェックが入ったら枠を表示 */
+    border: 6px solid blue;
+    /* 線をwidthとheightに含める */
+    box-sizing: border-box;
+}
+
+.image_box img.thumbnail.checked + .disabled_checkbox {
+    /* 画像にcheckedクラスが指定された時はチェックボックスを非表示に */
+    display: block;
+}
