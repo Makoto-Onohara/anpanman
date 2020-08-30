@@ -18,6 +18,16 @@ button {
     font-size: large;
     color: #ffffff;
 }
+@media screen and (max-width: 768px) {
+    button {
+        padding: 5px 10px;
+        font-size: small;
+    }
+    h2#msg {
+        margin: 2px;
+        font-size: medium;
+    }
+}
 
 
 /* 正解したあとの画像のスタイル */

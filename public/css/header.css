@@ -1,36 +1,65 @@
 /* ヘッダーのスタイル */
 nav {
     text-align: center;
+    max-width: 960px;
+    margin: 0 auto;
 }
 header{
     background-color: #263240;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
+    /* display: flex; */
+}
+header h1 {
+    margin: 0;
 }
 header h1,a {
     color: #ffffff;
 }
-header a {
+a.nav-link {
     text-decoration: none;
-    width: 100px;
+    /* width: 100px; */
 }
 
-header ul li.gamemenu{
+li.gamemenu{
+    /* width: 100px; */
     padding: 10px 15px;
-    border: #ffffff solid 2px;
+    border: #ffffff solid 1px;
 }
-li#noborder {
+/* li#noborder {
     border:none;
-}
+} */
 
-ul.nav-right {
-    size: 20px;
-    float: right;
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 ul.nav-right li {
     text-decoration: none;
     border: none;
-    padding: 0 20px;
+    padding: 0 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-nsp {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    .media-font-15 {
+        font-size: 15px;
+    }
+    .media-font-10 {
+        font-size: 10px;
+    }
 }
 
 
